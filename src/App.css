@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+  font-family:Roboto; 
+  background-color: #cecece;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+   margin:0.4em 0;
+}
+
+h1{
+  font-size:1.5em; 
+  font-weight:normal; 
+  margin:0.4em 0;
+}
+
+header {
+  height: 3.1em;
+  width: 100%;
+  padding: 8px;
+  background-color: #424242;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (min-width: 767px) {
+  header {height: 2.5em; }
+}
+
+span {
+  color: #c0392b;
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
+* {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+
+/*really simple responsive grid*/
+.container { 
+  width: 100%; 
+  margin: auto; 
+}
+@media screen and (min-width: 767px) {
+  .container {width: 100%; max-width: 1080px; margin: 0 auto;}
+}
+
+.container .row { 
+  float: left;
+  clear: both; 
+  width: 100%; 
+}
+@media screen and (min-width: 767px) {
+  .container .row{width:100%; float:left; clear:both;}
+}
+
+.container .col { 
+  float: left; 
+  margin: 0 0 1.2em; 
+  padding-right: 1.2em; 
+  padding-left: 1.2em; 
+}
+@media screen and (min-width: 767px) {
+  .container .col{float: left; margin: 0 0 1em; padding-right: .5em; padding-left: .5em;}
+}
+
+.container .col.one, .container .col.onehalf, .container .col.three, .container .col.four, .container .col.five, .container .col.six, .container .col.seven, .container .col.eight, .container .col.nine, .container .col.ten, .container .col.eleven, .container .col.twelve { width: 100%; }
+
+.container .col.two {
+  width: 33%;
+}
+
+@media screen and (min-width: 767px) {
+ .container .col.one { width: 8.33%; }
+  .container .col.onehalf {width: 12.495%}
+  .container .col.two { width: 16.66%; }
+  .container .col.three { width: 24.99%; }
+  .container .col.four { width: 50%; }
+  .container .col.five { width: 41.65%; }
+  .container .col.six { width: 49.98%; }
+  .container .col.seven { width: 58.31%; }
+  .container .col.eight { width: 66.64%; }
+  .container .col.nine { width: 74.97%; }
+  .container .col.ten { width: 83.3%; }
+  .container .col.eleven { width: 91.65%; }
+  .container .col.tweleve { width: 100%; }
+}
+
+.results {
+  height: 40vh;
+  text-align: left;
+  margin: 0 auto;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-bottom: 1em;
+  color: lime;
+  overflow-y: scroll;
+  background-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (min-width: 767px) {
+  .results {height: 60vh;}
+  }
+
+.results::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+.results::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #cccccc; 
+}
+ 
+/* Handle */
+.results::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.result {
+  font-size: 1em;
+  padding: 5px;
+  padding-left: 15px;
+  list-style: none;
+}
+
+.selected {
+  outline: #7ec0ee solid 4px;
+}
+
+.btn {
+  font-size: 1.7em; 
+  white-space:nowrap; 
+  width:100%; 
+  border-radius: 6px;
+  padding:.7em 1.5em; 
+  line-height:1em; 
+  display: inline-block;
+  zoom: 1; 
+  color: #FFF; 
+  text-align: center; 
+  position:relative; 
+  -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear; 
+  transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+
+.btn:hover {
+  color:#cccccc;
+}
+
+.btn:active {
+  top: 3px; outline: none; -webkit-box-shadow: none; box-shadow: none;
+}
+
+/*letter BUTTON STYLES*/    
+.dark{background-color: #2c3d51; border-color: #2c3d51; -webkit-box-shadow: 0 3px 0 #080c0f; box-shadow: 0 3px 0 #080c0f;}
+.dark:hover{background-color:#202d3d;}
+
+/*RESET BUTTON STYLES*/   
+.rouge{background-color: #c0392b; border-color: #c0392b; -webkit-box-shadow: 0 3px 0 #8f2a1f; box-shadow: 0 3px 0 #8f2a1f;}
+.rouge:hover{background-color:#ac3420;}
+
+.blurb {
+  padding: 1em;
+  text-align: center;
+}
+
+.accordion {
+   -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+
+}
+
+.accordion.open {
+  background-color: #adadad;
+     -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+}
+
+.accordion-heading {
+  margin: 0;
+  background-color: #909090;
+  font-size: 1.2em;
+}
+.accordion-heading a {
+  position: relative;
+  display: block;
+  padding: 12px;
+  color: #000;
+  text-decoration: none;
+
+}
+.accordion-heading a::after {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: .45em;
+  position: relative;
+  top: 0.3em;
+  transform: rotate(135deg);
+  vertical-align: top;
+  width: 0.45em;
+  float: right;
+  -webkit-transition: .3s; 
+  transition: .3s;
+}
+
+.accordion.open .accordion-heading a:after {
+  transform: rotate(-45deg);
+}
+
+.accordion-content {
+  overflow: hidden;
+  height: 0;
+}
+
+.accordion.open .accordion-content {
+  height: 80%;
+
+}
